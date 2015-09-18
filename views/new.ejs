@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+<form action='/ravens' method="POST">
+  <div class='form-group'>
+    <label for='name'>Name</label>
+    <input type="text" name='name' class='form-control' placeholder='e.g. Ray Lewis'>
+  </div>
+  <div class='form-group'>
+    <label for='position'>Position</label>
+    <input type="text" name='position' class='form-control' placeholder='e.g. MLB'>
+  </div>
+  <div class='form-group'>
+    <label for='number'>Number</label>
+    <input type="text" name='number' class='form-control' placeholder='e.g.52'>
+  </div>
+  <div class='form-group'>
+    <label for='picture'>Picture</label>
+    <input type="text" name='picture' class='form-control' placeholder='e.g.52'>
+  </div>
+  <button type='submit' class='btn btn-primary'>SUBMIT</button>
+</form>
+<% include ./partials/footer %>

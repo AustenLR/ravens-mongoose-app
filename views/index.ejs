@@ -1,0 +1,18 @@
+<% include ./partials/header %>
+
+  <% ravens.forEach(function(el){ %>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <div class="caption">
+        <img src="<%= el.picture %>" width='220' height='200' class='img-rounded'>
+        <h3> <a href="/ravens/<%= el.id %>"> <%= el.name %></a></h3>
+        <h5><%= el.position %></h5>
+        <h5><%= el.number %></h5>
+        <p><a href="/ravens/<%= el.id %>/edit" class="btn btn-default btn-sm" role="button">EDIT</a> <form action="/ravens/<%= el.id %>?_method=delete" method='POST'><button type='submit' class="btn btn-warning btn-sm" role="button">DELETE</button></form></p>
+      </div>
+    </div>
+  </div>
+  <%  }) %>
+
+
+<% include ./partials/footer %>
